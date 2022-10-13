@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import ProfileCSS from './profile.module.css';
+// import ProfileCSS from './profile.module.css';
 
 export const Profile = ({ username, tag, location, avatar, stats }) => {
     return (
@@ -20,7 +20,7 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
                         <span>{text}</span>
                         <span>{value}</span>
                     </li>
-                ))};
+                ))}
             </ul>
         </div>
     );
