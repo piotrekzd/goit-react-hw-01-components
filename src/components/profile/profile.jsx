@@ -1,24 +1,27 @@
 import PropTypes from 'prop-types';
-// import ProfileCSS from './profile.module.css';
+import ProfileStyle from './profile.module.css';
 
 export const Profile = ({ username, tag, location, avatar, stats }) => {
     return (
-        <div>
-            <div>
-                <img src={avatar} alt='avatar' />
-                <p>{username}</p>
-                <p>@{tag}</p>
-                <p>{location}</p>
+        <div className={ProfileStyle.card}>
+            <div className={ProfileStyle.user}>
+                <img className={ProfileStyle.avatar} src={avatar} alt='avatar' />
+                <p className={ProfileStyle.name}>{username}</p>
+                <p className={ProfileStyle.tag}>@{tag}</p>
+                <p className={ProfileStyle.location}>{location}</p>
             </div>
-            <ul>
+            <ul className={ProfileStyle.stats}>
                 {[
                     [1, 'Followers', stats.followers],
                     [2, 'Views', stats.views],
                     [3, 'Likes', stats.likes],
                 ].map(([id, text, value]) => (
-                    <li key={id}>
-                        <span>{text}</span>
-                        <span>{value}</span>
+                    <li
+                        className={ProfileStyle.item}
+                        key={id}
+                    >
+                        <span className={ProfileStyle.label}>{text}</span>
+                        <span className={ProfileStyle.value}>{value}</span>
                     </li>
                 ))}
             </ul>
