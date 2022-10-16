@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-export const Transaction = ({ items }) => {
+export const Transactions = ({ items }) => {
     return (
         <table>
             <thead>
@@ -23,7 +23,7 @@ export const Transaction = ({ items }) => {
     );
 };
 
-Transaction.propTypes = {
+Transactions.propTypes = {
     items: PropTypes.arrayOf(
         PropTypes.shape({
             id: PropTypes.number.isRequired,
